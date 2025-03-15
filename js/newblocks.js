@@ -26,3 +26,34 @@ availableProgramsBlockEls.forEach((block) => {
     }
   });
 });
+
+///
+
+const docSamplesSwiperEl = document.querySelector('.doc-samples .swiper');
+
+if (docSamplesSwiperEl) {
+  const docSamplesSwiper = new Swiper(docSamplesSwiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+}
+
+Fancybox.bind('[data-fancybox="doc-gallery"]');
