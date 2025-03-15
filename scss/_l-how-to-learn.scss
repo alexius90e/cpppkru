@@ -1,0 +1,84 @@
+.how-to-learn {
+  padding: 48px 0;
+
+  @include laptop {
+    padding: 36px 0;
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+
+    @include laptop {
+      margin: 0 0 28px;
+      font-size: 28px;
+    }
+
+    @include mobile {
+      margin: 0 0 24px;
+      font-size: 24px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__step {
+    flex: 0 0 calc(100% / 4 - 20px / 4 * 3);
+    padding: 24px 24px 32px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: rgba($color: #004080, $alpha: 1);
+
+    @include desktop {
+      flex: 0 0 calc(100% / 2 - 20px / 2);
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+      padding: 24px 20px 32px;
+    }
+
+    &-id {
+      font-size: 68px;
+      font-weight: 900;
+      line-height: 110%;
+      color: #ffffff;
+
+      @include tablet {
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+
+    &-title {
+      margin: 24px 0 12px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 150%;
+      color: #ffffff;
+
+      @include tablet {
+        margin-top: 16px;
+        font-size: 18px;
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      color: #ffffff;
+
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+  }
+}

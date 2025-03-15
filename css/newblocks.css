@@ -374,3 +374,100 @@ textarea {
   height: inherit;
   background-color: #004080;
 }
+
+.how-to-learn {
+  padding: 48px 0;
+}
+@media (max-width: 992px) {
+  .how-to-learn {
+    padding: 36px 0;
+  }
+}
+.how-to-learn__title {
+  margin: 0 0 32px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .how-to-learn__title {
+    margin: 0 0 28px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .how-to-learn__title {
+    margin: 0 0 24px;
+    font-size: 24px;
+  }
+}
+.how-to-learn__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+.how-to-learn__step {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(25% - 15px);
+          flex: 0 0 calc(25% - 15px);
+  padding: 24px 24px 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #004080;
+}
+@media (max-width: 1200px) {
+  .how-to-learn__step {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 10px);
+            flex: 0 0 calc(50% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .how-to-learn__step {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding: 24px 20px 32px;
+  }
+}
+.how-to-learn__step-id {
+  font-size: 68px;
+  font-weight: 900;
+  line-height: 110%;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .how-to-learn__step-id {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+.how-to-learn__step-title {
+  margin: 24px 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .how-to-learn__step-title {
+    margin-top: 16px;
+    font-size: 18px;
+  }
+}
+.how-to-learn__step-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .how-to-learn__step-text {
+    font-size: 14px;
+  }
+}
