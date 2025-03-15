@@ -294,14 +294,41 @@ textarea {
 .doc-samples__gallery .swiper {
   padding-bottom: 20px;
 }
+.doc-samples__gallery .swiper-slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  cursor: pointer;
+}
+.doc-samples__gallery .swiper-slide::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  background: url(../assets/zoom.svg) center/30px no-repeat;
+  background-color: rgba(0, 64, 128, 0.4);
+  opacity: 0.5;
+  -webkit-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+  pointer-events: none;
+}
+.doc-samples__gallery .swiper-slide:hover::before {
+  opacity: 1;
+}
 .doc-samples__gallery .swiper-slide img {
   display: block;
   max-width: 100%;
   height: auto;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 .doc-samples__gallery .swiper-button-prev, .doc-samples__gallery .swiper-button-next {
   display: -webkit-box;
@@ -323,6 +350,11 @@ textarea {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+@media (max-width: 768px) {
+  .doc-samples__gallery .swiper-button-prev, .doc-samples__gallery .swiper-button-next {
+    display: none;
+  }
 }
 .doc-samples__gallery .swiper-button-prev::after, .doc-samples__gallery .swiper-button-next::after {
   font-size: 20px;

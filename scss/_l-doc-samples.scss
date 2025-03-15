@@ -28,11 +28,35 @@
       padding-bottom: 20px;
 
       &-slide {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        cursor: pointer;
+
+        &::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 60px;
+          aspect-ratio: 1 / 1;
+          border-radius: 16px;
+          background: url(../assets/zoom.svg) center / 30px no-repeat;
+          background-color: rgba($color: #004080, $alpha: 0.4);
+          opacity: 0.5;
+          transition: opacity ease-in-out 0.2s;
+          pointer-events: none;
+        }
+
+        &:hover::before {
+          opacity: 1;
+        }
+
         & img {
           display: block;
           max-width: 100%;
           height: auto;
-          user-select: none;
         }
       }
 
@@ -48,6 +72,10 @@
           border-radius: 8px;
           backdrop-filter: blur(8px);
           user-select: none;
+
+          @include tablet {
+            display: none;
+          }
 
           &::after {
             font-size: 20px;
