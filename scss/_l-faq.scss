@@ -1,0 +1,130 @@
+.faq {
+  padding: 48px 0;
+
+  @include laptop {
+    padding: 36px 0;
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+
+    @include laptop {
+      margin: 0 0 28px;
+      font-size: 28px;
+    }
+
+    @include mobile {
+      margin: 0 0 24px;
+      font-size: 24px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba($color: #004080, $alpha: 0.05);
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.05);
+
+    @include tablet {
+      border-radius: 8px;
+    }
+
+    &-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 24px 36px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+      color: #222222;
+      cursor: pointer;
+
+      @include tablet {
+        padding: 24px;
+        font-size: 20px;
+      }
+
+      @include mobile {
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+
+      &::after {
+        content: '';
+        flex: 0 0 auto;
+        display: block;
+        width: 36px;
+        height: 36px;
+        background: url(../assets/plus.svg) center / cover no-repeat;
+        background-size: 100%;
+        transition: transform ease-in-out 0.2s;
+        will-change: transform;
+
+        @include tablet {
+          width: 30px;
+          height: 30px;
+        }
+
+        @include mobile {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    &.active &-question::after {
+      transform: rotate(135deg);
+    }
+
+    &-answer {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-height: 0;
+      padding: 0 36px;
+      box-sizing: border-box;
+      overflow: hidden;
+      font-variant-numeric: lining-nums proportional-nums;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: #222222;
+      transition: max-height 0.2s ease-out;
+      will-change: max-height;
+      opacity: 0.85;
+
+      @include tablet {
+        gap: 20px;
+        padding: 0 24px;
+        font-size: 14px;
+      }
+
+      @include mobile {
+        gap: 14px;
+        padding: 0 20px;
+        font-size: 12px;
+      }
+
+      &::after {
+        content: '';
+      }
+    }
+  }
+}

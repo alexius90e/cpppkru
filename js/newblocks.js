@@ -57,3 +57,32 @@ if (docSamplesSwiperEl) {
 }
 
 Fancybox.bind('[data-fancybox="doc-gallery"]');
+
+///
+
+const faqItems = document.querySelectorAll('.faq__item');
+
+faqItems.forEach((faqItem) => {
+  faqItem.addEventListener('click', (event) => {
+    const panel = event.currentTarget.querySelector('.faq__item-answer');
+    const parentFaqItems = event.currentTarget.parentNode.querySelectorAll('.faq__item');
+    const isQuestion = event.target.classList.contains('faq__item-question');
+
+    if (isQuestion) {
+      event.currentTarget.classList.toggle('active');
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    }
+
+    parentFaqItems.forEach((item) => {
+      if (item !== event.currentTarget && item.classList.contains('active')) {
+        item.classList.remove('active');
+        const itemPanel = item.querySelector('.faq__item-answer');
+        itemPanel.style.maxHeight = null;
+      }
+    });
+  });
+});
