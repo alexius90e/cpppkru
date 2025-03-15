@@ -629,3 +629,109 @@ textarea {
 .faq__item-answer::after {
   content: "";
 }
+
+.also-choose {
+  padding: 48px 0;
+}
+@media (max-width: 992px) {
+  .also-choose {
+    padding: 36px 0;
+  }
+}
+.also-choose__title {
+  margin: 0 0 32px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .also-choose__title {
+    margin: 0 0 28px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .also-choose__title {
+    margin: 0 0 24px;
+    font-size: 24px;
+  }
+}
+.also-choose__courses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+.also-choose__course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.3333333333% - 13.3333333333px);
+          flex: 0 0 calc(33.3333333333% - 13.3333333333px);
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #004080;
+  border-radius: 20px;
+}
+@media (max-width: 992px) {
+  .also-choose__course {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 10px);
+            flex: 0 0 calc(50% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .also-choose__course {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+@media (max-width: 576px) {
+  .also-choose__course {
+    padding: 16px;
+  }
+}
+.also-choose__course-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #004080;
+}
+@media (max-width: 576px) {
+  .also-choose__course-title {
+    font-size: 18px;
+  }
+}
+.also-choose__course-title-link {
+  color: #004080;
+}
+.also-choose__course-price {
+  margin: 0 0 2px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 125%;
+  color: #004080;
+}
+.also-choose__course-date {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #222222;
+}

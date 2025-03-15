@@ -1,0 +1,86 @@
+.also-choose {
+  padding: 48px 0;
+
+  @include laptop {
+    padding: 36px 0;
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+
+    @include laptop {
+      margin: 0 0 28px;
+      font-size: 28px;
+    }
+
+    @include mobile {
+      margin: 0 0 24px;
+      font-size: 24px;
+    }
+  }
+
+  &__courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__course {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(100% / 3 - 20px / 3 * 2);
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #004080;
+    border-radius: 20px;
+
+    @include laptop {
+      flex: 0 0 calc(100% / 2 - 20px / 2);
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    @include mobile {
+      padding: 16px;
+    }
+
+    &-title {
+      flex: 1 1 auto;
+      margin: 0 0 16px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: #004080;
+
+      @include mobile {
+        font-size: 18px;
+      }
+
+      &-link {
+        color: #004080;
+      }
+    }
+
+    &-price {
+      margin: 0 0 2px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 125%;
+      color: #004080;
+    }
+
+    &-date {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      color: #222222;
+    }
+  }
+}
