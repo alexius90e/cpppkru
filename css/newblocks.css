@@ -794,6 +794,7 @@ textarea {
   font-weight: 500;
   line-height: 125%;
   border: none;
+  outline: none;
   border-radius: 6px;
 }
 .curriculum__form-input {
