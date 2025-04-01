@@ -1,0 +1,151 @@
+.curriculum {
+  padding: 48px 0;
+  background-color: rgba($color: #004080, $alpha: 0.08);
+
+  @include laptop {
+    padding: 36px 0;
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+
+    @include laptop {
+      margin: 0 0 28px;
+      font-size: 28px;
+    }
+
+    @include mobile {
+      margin: 0 0 24px;
+      font-size: 24px;
+    }
+  }
+
+  &__form {
+    &-inputs {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0;
+      margin: 0 0 24px;
+      border: none;
+
+      @include desktop {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-input,
+    &-button {
+      flex: 0 0 calc(100% / 4 - 16px / 4 * 3);
+      display: inline-block;
+      padding: 16px 20px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 125%;
+      border: none;
+      border-radius: 6px;
+    }
+
+    &-input {
+      flex: 1 1 20%;
+      color: black;
+
+      @include desktop {
+        flex: 0 0 calc(100% / 2 - 20px / 2);
+      }
+
+      @include tablet {
+        flex: 1 1 100%;
+      }
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      gap: 12px;
+      color: #ffffff;
+      outline: none !important;
+      background-color: #004080;
+      transition-property: background-color;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.14s;
+      cursor: pointer;
+
+      @include desktop {
+        flex: 0 0 calc(100% / 2 - 20px / 2);
+      }
+
+      @include tablet {
+        flex: 1 1 100%;
+      }
+
+      &:hover {
+        background-color: #002f5e;
+      }
+
+      &:active {
+        background-color: #002345;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        flex: 0 0 auto;
+        width: 20px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/pdf-file.svg) center / cover no-repeat;
+        filter: invert(100%);
+      }
+    }
+
+    &-agreement {
+      margin: 0;
+      padding: 0;
+    }
+
+    &-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      &-input {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        flex: 0 0 auto;
+        width: 24px;
+        aspect-ratio: 1 / 1;
+        box-sizing: border-box;
+        border: 2px solid #004080;
+        border-radius: 6px;
+        background-color: rgba($color: #004080, $alpha: 0);
+      }
+
+      &:has(input:checked)::before {
+        background: url(../assets/check-mark.svg) center / 16px no-repeat;
+        background-color: rgba($color: #004080, $alpha: 1);
+      }
+
+      &-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 125%;
+        color: #000000;
+
+        & a {
+          color: #004080;
+        }
+      }
+    }
+  }
+}
