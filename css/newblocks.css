@@ -14,6 +14,9 @@ body {
   color: #000000;
   background-color: #f4f4f5;
 }
+body > * {
+  font-family: "Montserrat", sans-serif;
+}
 
 a,
 button,
@@ -1249,7 +1252,7 @@ textarea {
 }
 .profession-info__card-info-title {
   margin: 0 0 4px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 125%;
   color: #004080;
