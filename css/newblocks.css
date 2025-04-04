@@ -1173,3 +1173,96 @@ textarea {
 .get-profession__callback-form-button:active {
   background-color: #002345;
 }
+
+.profession-info {
+  padding: 60px 0;
+}
+@media (max-width: 992px) {
+  .profession-info {
+    padding: 40px 0;
+  }
+}
+.profession-info__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+.profession-info__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 12px);
+          flex: 0 0 calc(50% - 12px);
+  gap: 24px;
+  padding: 12px;
+  padding-right: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #004080;
+  border-radius: 10px;
+}
+@media (max-width: 992px) {
+  .profession-info__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.profession-info__card-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0;
+  width: 80px;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 576px) {
+  .profession-info__card-icon {
+    width: 60px;
+  }
+}
+.profession-info__card-icon-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.profession-info__card-info-title {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  color: #004080;
+}
+@media (max-width: 576px) {
+  .profession-info__card-info-title {
+    font-size: 18px;
+  }
+}
+.profession-info__card-info-text {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+  color: #000000;
+}
+@media (max-width: 576px) {
+  .profession-info__card-info-text {
+    font-size: 13px;
+  }
+}
