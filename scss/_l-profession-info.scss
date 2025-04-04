@@ -9,6 +9,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    
+    @include laptop {
+      gap: 16px;
+    }
   }
 
   &__card {

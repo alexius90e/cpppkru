@@ -1,0 +1,47 @@
+.company-info {
+  padding: 60px 0;
+
+  @include laptop {
+    padding: 40px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 24px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+
+    @include laptop {
+      flex: 0 0 calc(50% - 24px / 2);
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    &-value {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 90px;
+      font-weight: 900;
+      line-height: 100%;
+      text-align: center;
+      color: #004080;
+    }
+
+    &-text {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 100%;
+      text-align: center;
+      color: #004080;
+    }
+  }
+}
